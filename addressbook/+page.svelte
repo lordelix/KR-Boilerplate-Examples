@@ -4,7 +4,6 @@
 	import { goto } from '$app/navigation'
 
 	let { data } = $props()
-
 	const entries = $derived(data.entries || [])
 </script>
 
