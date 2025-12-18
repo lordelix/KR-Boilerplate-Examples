@@ -14,7 +14,7 @@
 <h1>Artikel</h1>
 
 <Wrapper tag="ol" size="small" class="$flex $flex-column $gap-3">
-	{#each articles as { author, date, content, image, pdf, teaser, title, website }}
+	{#each articles as { author, date, content, image, pdf, teaser, title, website }, i (i)}
 		<li>
 			{#if image}
 				<Figure src={image.src} caption={image.description} />
@@ -32,7 +32,7 @@
 				{@html teaser}
 			</p>
 
-			{#each content || [] as { text, title, image }}
+			{#each content || [] as { text, title, image }, j (j)}
 				<XioniArticleContent {text} {title} {image} />
 			{/each}
 

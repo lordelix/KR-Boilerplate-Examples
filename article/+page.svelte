@@ -9,7 +9,7 @@
 	<Client browser>
 		<h1>Artikel ({articlesMeta?.totalCount})</h1>
 		<ol class="$flex $flex-column $gap">
-			{#each articles || [] as article}
+			{#each articles || [] as article, i (i)}
 				<XioniArticleTile tag="li" {article} />
 			{/each}
 		</ol>

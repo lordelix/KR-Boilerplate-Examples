@@ -9,7 +9,7 @@
 	<Client browser>
 		{#if data.events.length}
 			<ol class="$flex $flex-column $gap">
-				{#each data.events as event}
+				{#each data.events as event (event.id)}
 					<li>
 						{#if event.image}
 							<img src={event.image.src} alt={event.image.description} loading="lazy" />
@@ -49,7 +49,7 @@
 						</ButtonRow>
 						{#if event.images}
 							<Grid gap class="$mt">
-								{#each event.images as { src, description }}
+								{#each event.images as { src, description } (src)}
 									<Grid size="tablet-1-3 desktop-1-5">
 										<img {src} alt={description} loading="lazy" />
 									</Grid>

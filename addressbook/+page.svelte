@@ -21,7 +21,7 @@
 		<Message type="info">Keine Einträge gefunden</Message>
 	{:else}
 		<ul class="$flex $flex-column $gap">
-			{#each entries as entry}
+			{#each entries as entry (entry.id)}
 				<AddressbookEntry {entry} tag="li" onclick={() => goto('./' + entry.id)} />
 			{/each}
 		</ul>

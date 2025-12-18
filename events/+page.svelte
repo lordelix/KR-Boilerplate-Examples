@@ -7,7 +7,7 @@
 	<Client browser>
 		{#if data.events.length}
 			<ol class="$flex $flex-column $gap">
-				{#each data.events as event}
+				{#each data.events as event (event.id)}
 					<XioniEventTile tag="li" {event} />
 				{/each}
 			</ol>

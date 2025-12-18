@@ -1,5 +1,5 @@
 <h1>Grid</h1>
-{#each [0, 2, 4, 6, 8] as gap}
+{#each [0, 2, 4, 6, 8] as gap (gap)}
 	<hr />
 
 	<p>

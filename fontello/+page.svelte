@@ -60,7 +60,7 @@
 <h2>Verfügbare Icons</h2>
 
 <ul>
-	{#each icons as name}
+	{#each icons as name (name)}
 		<li>
 			<Fontello {name} />
 			{name}
