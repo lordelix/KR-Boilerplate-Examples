@@ -1,5 +1,5 @@
 <script>
-	export let data
+	const { data } = $props()
 </script>
 
 <h1>Speisekarte</h1>

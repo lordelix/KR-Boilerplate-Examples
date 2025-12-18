@@ -1,7 +1,7 @@
 <script>
-	export let data
+	const { data } = $props()
 
-	let registration = null
+	let registration = $state(null)
 </script>
 
 <Wrapper>

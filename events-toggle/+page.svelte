@@ -1,7 +1,7 @@
 <script>
-	export let data
+	const { data } = $props()
 
-	let expandedElement = null
+	let expandedElement = $state(null)
 </script>
 
 <Wrapper>

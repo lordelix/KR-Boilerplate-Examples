@@ -1,5 +1,4 @@
 <script>
-	import icon from '$lib/boilerplate/actions/icon'
 	import fontello from '$lib/boilerplate/actions/fontello'
 	import Fontello from '$lib/boilerplate/components/Fontello/Fontello.svelte'
 

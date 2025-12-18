@@ -1,5 +1,7 @@
 <script lang="ts">
-	export let data
+	import { Button, ButtonRow, Client, Fontello, Grid, Wrapper } from '$lib/boilerplate/components'
+
+	const { data } = $props()
 </script>
 
 <Wrapper>
@@ -31,13 +33,14 @@
 							</p>
 						{/if}
 						<ButtonRow>
-							{#if event.ticketshop}
-								<Button to={event.ticketshop.toString()} fontello="ticket">Zum Ticketshop</Button>
+							{#if event.ticketshopURL}
+								<Button to={event.ticketshopURL.toString()} fontello="ticket"
+									>Zum Ticketshop</Button>
 							{/if}
 
-							{#if event.website}
-								<Button fontello="globe" to={event.website.toString()}
-									>{event.website.hostname}</Button>
+							{#if event.ownerURL}
+								<Button fontello="globe" to={event.ownerURL.toString()}
+									>{event.ownerURL.hostname}</Button>
 							{/if}
 
 							{#if event.pdf}

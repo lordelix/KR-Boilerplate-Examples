@@ -1,7 +1,6 @@
 <script>
-	export let data
-
-	const { title, images } = data.album
+	const { data } = $props()
+	const { title, images } = $derived(data.album)
 </script>
 
 <h1>{title}</h1>

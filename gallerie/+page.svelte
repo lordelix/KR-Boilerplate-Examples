@@ -1,7 +1,6 @@
 <script>
-	export let data
-
-	const gallery = data.gallery.filter(album => album.images.length)
+	const { data } = $props()
+	const gallery = $derived(data.gallery.filter(album => album.images.length))
 </script>
 
 <h1>Gallerie</h1>
