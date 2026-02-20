@@ -1,5 +1,6 @@
 <script>
 	const { data } = $props()
+	const events = $derived(data.events || [])
 
 	let expandedElement = $state(null)
 </script>
@@ -7,9 +8,9 @@
 <Wrapper>
 	<h1>Events <i>(Toggle)</i></h1>
 	<Client browser>
-		{#if data.events.length}
+		{#if events.length}
 			<ol class="$flex $flex-column $gap">
-				{#each data.events as event (event.id)}
+				{#each events as event (event.id)}
 					<li>
 						{#if event.image}
 							<img src={event.image.thumbSrc} alt={event.image.alt} loading="lazy" />

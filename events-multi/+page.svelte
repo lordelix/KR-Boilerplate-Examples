@@ -1,8 +1,7 @@
-<script lang="ts">
-	import { Client, Fontello, Wrapper, XioniEventTile } from '$lib/boilerplate/components'
-
+<script>
 	let { data } = $props()
-	let { events, eventCount } = $derived(data)
+	const events = $derived(data.events || [])
+	const eventCount = $derived(data.eventCount || 0)
 </script>
 
 <Wrapper>

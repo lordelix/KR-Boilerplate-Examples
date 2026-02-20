@@ -1,15 +1,14 @@
-<script lang="ts">
-	import { Button, ButtonRow, Client, Fontello, Grid, Wrapper } from '$lib/boilerplate/components'
-
+<script>
 	const { data } = $props()
+	const events = $derived(data.events || [])
 </script>
 
 <Wrapper>
 	<h1>Events <i>(Expanded)</i></h1>
 	<Client browser>
-		{#if data.events.length}
+		{#if events.length}
 			<ol class="$flex $flex-column $gap">
-				{#each data.events as event (event.id)}
+				{#each events as event (event.id)}
 					<li>
 						{#if event.image}
 							<img src={event.image.src} alt={event.image.description} loading="lazy" />

@@ -5,7 +5,6 @@
 		Form,
 		Input,
 		Link,
-		Select,
 		Textarea,
 		Wrapper,
 		XioniEvent

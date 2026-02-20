@@ -2,7 +2,6 @@
 	import { AddressbookEntry, Client } from '$lib/boilerplate/components'
 
 	let { data } = $props()
-
 	const categories = $derived(data.categories || [])
 </script>
 

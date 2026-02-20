@@ -1,7 +1,3 @@
-<script lang="ts">
-	import { InView } from '$lib/boilerplate/components'
-</script>
-
 <div>
 	<InView transition="scale">
 		<h3>Scale</h3>

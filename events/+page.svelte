@@ -1,13 +1,14 @@
 <script>
 	const { data } = $props()
+	const events = $derived(data.events || [])
 </script>
 
 <Wrapper>
 	<h1>Events</h1>
 	<Client browser>
-		{#if data.events.length}
+		{#if events.length}
 			<ol class="$flex $flex-column $gap">
-				{#each data.events as event (event.id)}
+				{#each events as event (event.id)}
 					<XioniEventTile tag="li" {event} />
 				{/each}
 			</ol>
