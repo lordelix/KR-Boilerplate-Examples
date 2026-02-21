@@ -5,7 +5,7 @@
 	import mapAddressbookEntryToAddress from '$lib/boilerplate/utils/mapAddressbookEntryToAddress.js'
 
 	let { data } = $props()
-	const entry = data.entry as XioniCMS.AddressbookEntry
+	const entry = $derived(data.entry as XioniCMS.AddressbookEntry)
 </script>
 
 <svelte:head>
